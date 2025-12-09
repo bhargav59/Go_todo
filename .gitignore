@@ -1,0 +1,42 @@
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+bin/
+
+# Database
+*.db
+*.sqlite
+
+# Environment
+.env
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage.out
+coverage.html
+
+# Vendor (if not using)
+# vendor/
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
