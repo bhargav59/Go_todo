@@ -38,10 +38,10 @@ import (
 	"github.com/bhaskar/todo-api/pkg/utils"
 	"github.com/gin-gonic/gin"
 
-	// Swagger docs - uncomment after running 'make swagger'
-	// _ "github.com/bhaskar/todo-api/docs"
-	// swaggerFiles "github.com/swaggo/files"
-	// ginSwagger "github.com/swaggo/gin-swagger"
+	// Swagger docs
+	_ "github.com/bhaskar/todo-api/docs"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 func main() {
@@ -105,8 +105,8 @@ func main() {
 	// Health check
 	router.GET("/health", handlers.HealthCheck)
 
-	// Swagger docs - uncomment after running 'make swagger'
-	// router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	// Swagger docs
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	// API routes
 	api := router.Group("/api")
